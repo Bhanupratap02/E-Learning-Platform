@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
+## E-Learning Platform 
+> This is E-Learning Platform built with  Next.js 13, React, Stripe, Mux, Prisma, Tailwind, Shadcn UI,MySQL
+ This Learning Management System serves as a centralized hub for educational content, enabling easy access, interaction, and tracking of courses and materials.
 First, run the development server:
+<img width="1552" alt="Screenshot 2024-02-04 at 3 28 15 PM" src="https://github.com/Bhanupratap02/E-Learning-Platform/assets/100342013/c7ad4f73-d085-4ae1-b759-2096a2519484">
+<img width="1552" alt="Screenshot 2024-02-04 at 3 34 05 PM" src="https://github.com/Bhanupratap02/E-Learning-Platform/assets/100342013/f0d0b03f-f304-46ba-a2b9-d07bcfb98485">
+<img width="1552" alt="Screenshot 2024-02-04 at 3 33 43 PM" src="https://github.com/Bhanupratap02/E-Learning-Platform/assets/100342013/6f4c192d-e8da-4bec-9986-c57fe9a16507">
 
+### Key Features:
+
++ Browse & Filter Courses
++ Purchase Courses using Stripe
++ Mark Chapters as Completed or Uncompleted
++ Progress Calculation of each Course
++ Student Dashboard
++ Teacher mode
++ Create new Courses
++ Create new Chapters
++ Easily reorder chapter position with drag n’ drop
++ Upload thumbnails, attachments and videos using UploadThing
++ Video processing using Mux
++ HLS Video player using Mux
++ Rich text editor for chapter description
++ Authentication using Clerk
++ ORM using Prisma
++ MySQL database 
+
+### Prerequisites
+Node version 18.x.x
+
+### Install Dependencies
 ```bash
+npm install
+```
+### Setup .env file
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+
+DATABASE_URL=
+
+UPLOADTHING_SECRET=
+UPLOADTHING_APP_ID=
+
+MUX_TOKEN_ID=
+MUX_TOKEN_SECRET=
+
+STRIPE_API_KEY=
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+STRIPE_WEBHOOK_SECRET=
+
+NEXT_PUBLIC_TEACHER_ID=
+```
+### Setup Prisma
+```
+npx prisma generate
+npx prisma db push
+
+```
+### Run
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
