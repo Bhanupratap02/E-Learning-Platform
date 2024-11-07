@@ -5,8 +5,8 @@ const Logo = () => {
   return (
     <Image
       style={{ borderRadius: "50%" }}
-      height={30}
-      width={50}
+      height={50}
+      width={60}
       alt="logo"
       src={"/logo.png"}
     />
